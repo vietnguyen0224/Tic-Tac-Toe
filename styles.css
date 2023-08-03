@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: rgb(115, 26, 148);
+    --blue: rgb(123, 192, 232);
+    --white: rgb(226, 229, 215);
+
+    
+}
+
+html {
+    background-color: var(--blue);
+    font-family: 'Lobster', sans-serif;
+}
+
+body {
+    max-width: 50rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 5rem;
+    color: var(--purple); 
+}
+
+.title {
+    font-size: 5rem;
+    margin: 0 auto;
+}
+
+.moves span {
+    font-weight: bolder;
+}
+
+/* Inspired by and huge thanks to https: //github.com/lauriecai/tic-tac-toe/tree/main */
+.gameBoard-container {
+    position: relative;
+    width: 100%;
+    /* To create the white background for game board */
+    padding-top: 100%;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+}
+
+.gameBoard {
+    position: absolute;
+    /* Spread the cells over the white game board */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0.5rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, minmax(10px,1fr));
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    grid-gap: 0.5rem;
+    border-radius: 6px;
+}
+
+.cell {
+    position: relative;
+    border-radius: 4px;
+    background-color: rgb(162, 206, 221);
+}
+
+.cell:hover {
+    cursor: url(./icons/pistol.cur), auto;
+    background-color: rgba(123, 192, 232, 0.3);;
+}
+
+.cell > img {
+    display: none;
+}
+
+.warning {
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--purple);
+    font-size: 2rem;
+}
+
+.player2:hover {
+    cursor: url(./icons/sword.cur), auto;
+}
