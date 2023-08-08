@@ -10,18 +10,30 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Tic Tac Toe</h1>
+        <h1 class="title">Simple Tic Tac Toe</h1>
         <div class="displayController">
-            <button id="player" onclick="togglePlayer()">Finished your move?</button>
+            <button id="restart" onclick="restart()">Restart</button>
         </div>
         <p class="moves">
             <span class="playerName" id="playerName">Player 1</span>
-            , make your move.
+            , make your move!
         </p>
     </header>
     <main>
         <div id="gameBoard-container" class="gameBoard-container"></div>
-        <div class="warning"></div>
+        <div class="rules">
+            <p>Whichever side wins, they will have the opportunity to play first in the next round</p>
+            <p>Clicking the "Restart" button will give the other the opportunity to play first</p>
+        </div>
+        <!-- The Model source: https://www.w3schools.com/howto/howto_css_modals.asp -->
+        <div id="popup" class="popup">
+            <div id="popupForm">
+                <span class="close">&times;</span>
+                <div id="congrats">
+                    <span id="winner"></span> wins!!!
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>

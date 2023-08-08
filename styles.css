@@ -6,8 +6,6 @@
     --purple: rgb(115, 26, 148);
     --blue: rgb(123, 192, 232);
     --white: rgb(226, 229, 215);
-
-    
 }
 
 html {
@@ -32,8 +30,25 @@ header {
     margin: 0 auto;
 }
 
+.displayController {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+}
+#restart {
+    font-size: 2rem;
+    font-family: 'Lobster', sans-serif;
+    color: var(--purple);
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 10px;
+}
+
 .moves span {
     font-weight: bolder;
+    font-size: 2rem;
 }
 
 /* Inspired by and huge thanks to https: //github.com/lauriecai/tic-tac-toe/tree/main */
@@ -70,6 +85,7 @@ header {
 
 .cell:hover {
     cursor: url(./icons/pistol.cur), auto;
+    caret-color: var(--blue);
     background-color: rgba(123, 192, 232, 0.3);;
 }
 
@@ -86,4 +102,64 @@ header {
 
 .player2:hover {
     cursor: url(./icons/sword.cur), auto;
+    caret-color: var(--blue);
 }
+
+.rules {
+    text-align: center;
+    color: var(--purple);
+}
+
+/* The Modal (background) source: https: //www.w3schools.com/howto/howto_css_modals.asp*/
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+#popupForm {
+    background-color: var(--blue);
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: solid 1px var(--purple);
+    border-radius: 8px;
+    width: 18em;
+    font-size: 1.5rem;
+    color: var(--purple);
+}
+
+#congrats {
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: var(--purple);
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* End of popup */
